@@ -12,6 +12,5 @@ describe 'user visit student edit page' do
 
     expect(current_path).to eq(student_path(student1))
     expect(page).to have_content("Ilona")
-
   end
 end
