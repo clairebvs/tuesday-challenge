@@ -5,12 +5,14 @@ describe 'user visit student edit page' do
     student1 = Student.create(name: "Nathan")
 
     visit student_path(student1)
+    save_and_open_page
     click_link('Edit')
 
     fill_in :student_name, with: 'Ilona'
-    click_button 'Update'
+    click_button('Update')
 
-    expect(current_path).to eq(student_path(student1))
+    expect(current_path).to eq("/students/#{student1.id}")
+
     expect(page).to have_content("Ilona")
   end
 end
