@@ -1,4 +1,4 @@
-<h2>Edit <%= @student.name %> </h2>
+<%= 'Edit' %>
 
 <%= form_for [@student] do |f| %>
   <%= f.label :name%>
@@ -7,4 +7,4 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to 'Update', student_path(@student) %>
+<%= link_to 'Update', students_path %>
