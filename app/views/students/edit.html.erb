@@ -1,0 +1,10 @@
+<%= 'Edit' %>
+
+<%= form_for [@student] do |f| %>
+  <%= f.label :name%>
+  <%= f.text_field :name%>
+
+  <%= f.submit %>
+<% end %>
+
+<%= link_to 'Update', students_path %>
