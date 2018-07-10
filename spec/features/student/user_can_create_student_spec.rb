@@ -5,7 +5,7 @@ describe 'a user visits new student page' do
 
     visit new_student_path
 
-    fill_in :student_name, with: "Jonh"
+    fill_in :student_name, with: "John"
     click_button "Create Student"
 
     expect(current_path).to eq("/students")
