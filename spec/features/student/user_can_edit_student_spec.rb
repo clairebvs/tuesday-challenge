@@ -5,7 +5,6 @@ describe 'user visit student edit page' do
     student1 = Student.create(name: "Nathan")
 
     visit student_path(student1)
-    save_and_open_page
     click_link('Edit')
 
     fill_in :student_name, with: 'Ilona'
